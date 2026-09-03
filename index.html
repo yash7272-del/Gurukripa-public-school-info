@@ -1,0 +1,3246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color" content="#0796dc">
+<meta name="description" content="Gurukripa Public School - GPS Sewad">
+<title>Gurukripa Public School | GPS Sewad</title>
+
+<style>
+
+:root{
+--blue:#0796dc;
+--blue2:#55d2ff;
+--dark:#063b66;
+--sky:#eaf8ff;
+--white:#ffffff;
+--text:#12344d;
+--muted:#61798a;
+--border:#d7edf8;
+--shadow:0 25px 70px rgba(0,100,160,.15);
+--radius:25px;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+color:var(--text);
+background:#fff;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+button,
+input,
+select,
+textarea{
+font:inherit;
+}
+
+button{
+border:0;
+cursor:pointer;
+}
+
+.container{
+width:min(1180px,92%);
+margin:auto;
+}
+
+/* =========================
+TOP BAR
+========================= */
+
+.topbar{
+background:var(--dark);
+color:white;
+padding:9px 0;
+font-size:13px;
+}
+
+.topbar-inner{
+display:flex;
+justify-content:space-between;
+gap:15px;
+flex-wrap:wrap;
+}
+
+/* =========================
+NAVIGATION
+========================= */
+
+.nav{
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(255,255,255,.88);
+backdrop-filter:blur(20px);
+border-bottom:1px solid var(--border);
+}
+
+.nav-inner{
+height:78px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+font-weight:900;
+}
+
+.logo-icon{
+width:50px;
+height:50px;
+border-radius:16px;
+display:grid;
+place-items:center;
+color:white;
+font-size:26px;
+background:linear-gradient(135deg,var(--blue),var(--blue2));
+box-shadow:0 12px 30px #0796dc44;
+animation:float 4s ease-in-out infinite;
+}
+
+.logo-name{
+font-size:16px;
+}
+
+.logo-sub{
+display:block;
+font-size:10px;
+letter-spacing:1.5px;
+color:var(--blue);
+margin-top:3px;
+}
+
+.nav-links{
+display:flex;
+align-items:center;
+gap:22px;
+}
+
+.nav-links a{
+font-size:14px;
+font-weight:700;
+color:#31556d;
+position:relative;
+}
+
+.nav-links a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-7px;
+height:2px;
+width:0;
+background:var(--blue);
+transition:.3s;
+}
+
+.nav-links a:hover::after{
+width:100%;
+}
+
+.menu{
+display:none;
+padding:10px 13px;
+border-radius:12px;
+background:var(--sky);
+font-size:20px;
+}
+
+/* =========================
+MOBILE MENU
+========================= */
+
+.mobile-menu{
+display:none;
+background:white;
+border-bottom:1px solid var(--border);
+padding:15px 0;
+}
+
+.mobile-menu a{
+display:block;
+padding:12px;
+border-radius:12px;
+font-weight:700;
+color:#31556d;
+}
+
+.mobile-menu a:hover{
+background:var(--sky);
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero{
+min-height:760px;
+display:flex;
+align-items:center;
+position:relative;
+overflow:hidden;
+
+background:
+radial-gradient(
+circle at 90% 10%,
+#b9ecff 0,
+transparent 30%
+),
+linear-gradient(
+135deg,
+#fbfeff,
+#e6f8ff
+);
+}
+
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+
+background-image:
+radial-gradient(
+#42c5f533 1px,
+transparent 1px
+);
+
+background-size:27px 27px;
+}
+
+.hero-inner{
+position:relative;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.hero-content{
+animation:heroIn 1s ease both;
+}
+
+.badge{
+display:inline-flex;
+align-items:center;
+gap:7px;
+padding:10px 16px;
+border-radius:100px;
+background:white;
+border:1px solid var(--border);
+color:var(--blue);
+font-weight:900;
+box-shadow:0 10px 30px #0796dc15;
+}
+
+.hero h1{
+font-size:clamp(45px,6vw,78px);
+line-height:.98;
+letter-spacing:-4px;
+margin:20px 0;
+}
+
+.gradient{
+background:
+linear-gradient(
+90deg,
+#087abd,
+#18b9f3,
+#087abd
+);
+
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent;
+}
+
+.hero-description{
+font-size:18px;
+line-height:1.8;
+color:var(--muted);
+max-width:650px;
+}
+
+.buttons{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:28px;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+padding:14px 21px;
+border-radius:14px;
+font-weight:900;
+transition:.3s;
+}
+
+.primary{
+color:white;
+background:
+linear-gradient(
+135deg,
+var(--blue),
+#36c4f7
+);
+
+box-shadow:
+0 15px 35px #0796dc33;
+}
+
+.secondary{
+color:var(--dark);
+background:white;
+border:1px solid var(--border);
+}
+
+.btn:hover{
+transform:translateY(-5px) scale(1.02);
+box-shadow:
+0 20px 40px #0796dc25;
+}
+
+/* =========================
+REAL SCHOOL IMAGE
+========================= */
+
+.hero-image-area{
+position:relative;
+height:540px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.image-decoration{
+position:absolute;
+width:100px;
+height:100px;
+border-radius:50%;
+background:#55d2ff55;
+filter:blur(2px);
+animation:float 4s ease-in-out infinite;
+}
+
+.image-decoration.one{
+left:-15px;
+top:30px;
+}
+
+.image-decoration.two{
+right:-5px;
+bottom:40px;
+width:60px;
+height:60px;
+background:#ffd66b88;
+animation-delay:1s;
+}
+
+.school-photo-box{
+position:relative;
+width:100%;
+height:480px;
+border-radius:35px;
+overflow:hidden;
+
+background:white;
+
+border:8px solid white;
+
+box-shadow:
+0 30px 80px rgba(0,80,130,.25);
+
+transform:
+perspective(1000px)
+rotateY(-3deg)
+rotateX(2deg);
+
+animation:
+imageFloat 6s ease-in-out infinite;
+}
+
+.school-photo-box::before{
+content:"";
+position:absolute;
+inset:0;
+z-index:2;
+pointer-events:none;
+
+background:
+linear-gradient(
+120deg,
+transparent 20%,
+rgba(255,255,255,.45) 50%,
+transparent 80%
+);
+
+transform:
+translateX(-120%);
+
+animation:
+imageShine 5s infinite;
+}
+
+.school-photo{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+/* image bottom information */
+
+.image-caption{
+position:absolute;
+z-index:5;
+left:20px;
+right:20px;
+bottom:20px;
+
+padding:18px 20px;
+
+border-radius:20px;
+
+background:
+rgba(255,255,255,.90);
+
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(255,255,255,.8);
+
+box-shadow:
+0 15px 40px rgba(0,70,110,.18);
+}
+
+.image-caption strong{
+display:block;
+font-size:20px;
+color:var(--dark);
+}
+
+.image-caption span{
+display:block;
+margin-top:5px;
+font-size:13px;
+color:var(--muted);
+}
+
+/* =========================
+STATS
+========================= */
+
+.stats{
+margin-top:-60px;
+position:relative;
+z-index:10;
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:
+repeat(4,1fr);
+gap:15px;
+}
+
+.stat{
+background:white;
+border:1px solid var(--border);
+border-radius:22px;
+padding:25px;
+text-align:center;
+box-shadow:var(--shadow);
+transition:.3s;
+}
+
+.stat:hover{
+transform:translateY(-8px);
+}
+
+.stat-number{
+display:block;
+font-size:36px;
+font-weight:900;
+color:var(--blue);
+}
+
+.stat-label{
+display:block;
+margin-top:5px;
+color:var(--muted);
+font-weight:700;
+}
+
+/* =========================
+GENERAL SECTION
+========================= */
+
+section{
+padding:100px 0;
+}
+
+.section-title{
+max-width:760px;
+margin:0 auto 50px;
+text-align:center;
+}
+
+.eyebrow{
+font-size:13px;
+font-weight:900;
+letter-spacing:2px;
+text-transform:uppercase;
+color:var(--blue);
+}
+
+.section-title h2{
+font-size:clamp(34px,4vw,54px);
+letter-spacing:-2px;
+margin:10px 0;
+}
+
+.section-title p{
+color:var(--muted);
+line-height:1.8;
+}
+
+/* =========================
+ABOUT
+========================= */
+
+.about{
+background:#f7fcff;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:
+1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.info-card{
+background:white;
+border:1px solid var(--border);
+border-radius:30px;
+padding:32px;
+box-shadow:var(--shadow);
+transition:.4s;
+}
+
+.info-card:hover{
+transform:translateY(-7px);
+}
+
+.info-card h2{
+font-size:38px;
+margin:12px 0;
+}
+
+.info-card h3{
+font-size:27px;
+margin:15px 0;
+}
+
+.info-card p{
+color:var(--muted);
+line-height:1.8;
+}
+
+.check-list{
+display:grid;
+gap:15px;
+margin-top:23px;
+}
+
+.check{
+display:flex;
+gap:12px;
+align-items:flex-start;
+}
+
+.check-icon{
+width:30px;
+height:30px;
+flex-shrink:0;
+display:grid;
+place-items:center;
+border-radius:10px;
+background:#e2f7ff;
+color:var(--blue);
+font-weight:900;
+}
+
+/* =========================
+FEATURES
+========================= */
+
+.feature-grid{
+display:grid;
+grid-template-columns:
+repeat(3,1fr);
+gap:20px;
+}
+
+.feature{
+padding:30px;
+border-radius:27px;
+border:1px solid var(--border);
+background:white;
+position:relative;
+overflow:hidden;
+transition:.4s;
+}
+
+.feature::before{
+content:"";
+position:absolute;
+width:120px;
+height:120px;
+right:-40px;
+top:-40px;
+border-radius:50%;
+background:#dff7ff;
+}
+
+.feature:hover{
+transform:
+translateY(-12px)
+rotate(-.5deg);
+
+box-shadow:var(--shadow);
+}
+
+.feature-icon{
+width:60px;
+height:60px;
+border-radius:18px;
+display:grid;
+place-items:center;
+font-size:28px;
+background:
+linear-gradient(
+135deg,
+#dff7ff,
+white
+);
+position:relative;
+}
+
+.feature h3{
+margin:18px 0 8px;
+font-size:21px;
+}
+
+.feature p{
+color:var(--muted);
+line-height:1.7;
+}
+
+/* =========================
+GALLERY
+========================= */
+
+.gallery-section{
+background:#f7fcff;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:
+2fr 1fr 1fr;
+grid-auto-rows:190px;
+gap:16px;
+}
+
+.gallery-item{
+border-radius:26px;
+overflow:hidden;
+position:relative;
+border:1px solid var(--border);
+
+display:grid;
+place-items:center;
+
+font-size:58px;
+
+background:
+linear-gradient(
+135deg,
+#c6efff,
+#ffffff
+);
+
+transition:.4s;
+}
+
+.gallery-item:first-child{
+grid-row:span 2;
+}
+
+.gallery-item:hover{
+transform:scale(1.03);
+box-shadow:var(--shadow);
+}
+
+.gallery-item::after{
+content:"";
+position:absolute;
+
+width:200%;
+height:40px;
+
+background:#ffffff55;
+
+transform:
+translateX(-100%)
+rotate(30deg);
+
+animation:
+shine 5s infinite;
+}
+
+/* =========================
+BLOGS
+========================= */
+
+.blogs{
+background:#f7fcff;
+}
+
+.blog-grid{
+display:grid;
+grid-template-columns:
+repeat(3,1fr);
+gap:22px;
+}
+
+.blog{
+background:white;
+border:1px solid var(--border);
+border-radius:27px;
+overflow:hidden;
+transition:.4s;
+}
+
+.blog:hover{
+transform:
+translateY(-12px)
+rotate(-.5deg);
+
+box-shadow:var(--shadow);
+}
+
+.blog-image{
+height:190px;
+
+display:grid;
+place-items:center;
+
+font-size:65px;
+
+background:
+linear-gradient(
+135deg,
+#a9e8ff,
+#effcff
+);
+
+position:relative;
+overflow:hidden;
+}
+
+.blog-image::after{
+content:"";
+position:absolute;
+
+width:180px;
+height:180px;
+
+border:2px solid white;
+
+border-radius:50%;
+
+animation:
+spin 15s linear infinite;
+}
+
+.blog-body{
+padding:25px;
+}
+
+.blog-tag{
+font-size:11px;
+font-weight:900;
+color:var(--blue);
+letter-spacing:1px;
+text-transform:uppercase;
+}
+
+.blog h3{
+font-size:22px;
+margin:9px 0;
+}
+
+.blog p{
+color:var(--muted);
+line-height:1.7;
+margin-bottom:18px;
+}
+
+/* =========================
+TIMELINE
+========================= */
+
+.timeline{
+position:relative;
+max-width:900px;
+margin:auto;
+}
+
+.timeline::before{
+content:"";
+position:absolute;
+left:50%;
+top:0;
+bottom:0;
+width:3px;
+background:#cceefa;
+transform:translateX(-50%);
+}
+
+.timeline-item{
+position:relative;
+width:50%;
+padding:15px 45px;
+}
+
+.timeline-item:nth-child(even){
+margin-left:50%;
+}
+
+.timeline-item::after{
+content:"";
+position:absolute;
+right:-8px;
+top:30px;
+
+width:16px;
+height:16px;
+
+border-radius:50%;
+
+background:var(--blue);
+
+box-shadow:
+0 0 0 8px #dff6ff;
+}
+
+.timeline-item:nth-child(even)::after{
+left:-8px;
+}
+
+.timeline-box{
+padding:23px;
+background:white;
+border:1px solid var(--border);
+border-radius:22px;
+box-shadow:
+0 12px 30px #0796dc12;
+}
+
+.timeline-box b{
+color:var(--blue);
+}
+
+.timeline-box h3{
+margin:7px 0;
+}
+
+.timeline-box p{
+color:var(--muted);
+line-height:1.7;
+}
+
+/* =========================
+ADMISSION
+========================= */
+
+.admission{
+background:
+linear-gradient(
+135deg,
+#e9f9ff,
+#ffffff
+);
+}
+
+.form{
+max-width:900px;
+margin:auto;
+
+padding:35px;
+
+background:white;
+
+border-radius:30px;
+
+border:1px solid var(--border);
+
+box-shadow:var(--shadow);
+}
+
+.form-grid{
+display:grid;
+grid-template-columns:
+1fr 1fr;
+gap:16px;
+}
+
+.field label{
+display:block;
+font-size:12px;
+font-weight:900;
+color:#416176;
+margin-bottom:7px;
+}
+
+.field input,
+.field select,
+.field textarea{
+width:100%;
+padding:14px 15px;
+
+border:
+1px solid #cfeaf6;
+
+border-radius:13px;
+
+outline:none;
+
+background:#fbfeff;
+
+transition:.25s;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+border-color:var(--blue);
+
+box-shadow:
+0 0 0 4px #0796dc12;
+}
+
+.field textarea{
+min-height:130px;
+resize:vertical;
+}
+
+.full{
+grid-column:1/-1;
+}
+
+/* =========================
+CTA
+========================= */
+
+.cta{
+position:relative;
+overflow:hidden;
+background:var(--dark);
+color:white;
+}
+
+.cta::before{
+content:"";
+
+position:absolute;
+
+width:450px;
+height:450px;
+
+border-radius:50%;
+
+right:-180px;
+top:-220px;
+
+background:var(--blue);
+
+opacity:.4;
+
+animation:
+float 6s infinite ease-in-out;
+}
+
+.cta-inner{
+position:relative;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+gap:25px;
+}
+
+.cta h2{
+font-size:42px;
+margin-top:10px;
+}
+
+.cta p{
+color:#c4e6f5;
+margin-top:8px;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+background:#042c4d;
+color:#d6edf8;
+padding:60px 0 25px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:
+1.5fr 1fr 1fr 1fr;
+gap:30px;
+}
+
+.footer h3{
+color:white;
+margin-bottom:15px;
+}
+
+.footer p,
+.footer a{
+font-size:14px;
+color:#a9c8d8;
+line-height:1.9;
+display:block;
+}
+
+.copyright{
+border-top:
+1px solid #ffffff18;
+
+margin-top:35px;
+
+padding-top:20px;
+
+font-size:12px;
+
+color:#8eb0c2;
+}
+
+/* =========================
+LOADER
+========================= */
+
+.loader{
+position:fixed;
+inset:0;
+z-index:9999;
+
+display:grid;
+place-items:center;
+
+background:white;
+
+transition:.7s;
+}
+
+.loader.hide{
+opacity:0;
+pointer-events:none;
+}
+
+.loader-ring{
+width:75px;
+height:75px;
+
+border:
+7px solid #dff6ff;
+
+border-top-color:
+var(--blue);
+
+border-radius:50%;
+
+animation:
+spin 1s linear infinite;
+}
+
+/* =========================
+SCROLL REVEAL
+========================= */
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:
+opacity .8s ease,
+transform .8s ease;
+}
+
+.reveal.show{
+opacity:1;
+transform:none;
+}
+
+/* =========================
+MODAL
+========================= */
+
+.modal{
+position:fixed;
+inset:0;
+
+z-index:5000;
+
+display:none;
+
+place-items:center;
+
+padding:20px;
+
+background:#042c4dcc;
+}
+
+.modal.open{
+display:grid;
+}
+
+.modal-box{
+width:min(620px,100%);
+
+background:white;
+
+border-radius:30px;
+
+padding:35px;
+
+position:relative;
+
+animation:
+pop .35s ease both;
+}
+
+.modal-box h2{
+margin:10px 0;
+}
+
+.modal-box p{
+color:var(--muted);
+line-height:1.8;
+}
+
+.close{
+position:absolute;
+
+right:15px;
+top:15px;
+
+width:40px;
+height:40px;
+
+border-radius:50%;
+
+background:var(--sky);
+
+font-size:22px;
+
+color:var(--dark);
+}
+
+/* =========================
+TOAST
+========================= */
+
+.toast{
+position:fixed;
+
+right:20px;
+bottom:20px;
+
+z-index:6000;
+
+padding:16px 19px;
+
+border-radius:16px;
+
+background:var(--dark);
+
+color:white;
+
+box-shadow:var(--shadow);
+
+transform:
+translateY(120px);
+
+transition:.35s;
+}
+
+.toast.show{
+transform:none;
+}
+
+/* =========================
+ANIMATIONS
+========================= */
+
+@keyframes float{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-13px);
+}
+
+}
+
+@keyframes imageFloat{
+
+0%,100%{
+transform:
+perspective(1000px)
+rotateY(-3deg)
+rotateX(2deg)
+translateY(0);
+}
+
+50%{
+transform:
+perspective(1000px)
+rotateY(-1deg)
+rotateX(1deg)
+translateY(-12px);
+}
+
+}
+
+@keyframes imageShine{
+
+0%{
+transform:
+translateX(-130%)
+rotate(25deg);
+}
+
+60%,100%{
+transform:
+translateX(130%)
+rotate(25deg);
+}
+
+}
+
+@keyframes shine{
+
+0%{
+transform:
+translateX(-100%)
+rotate(30deg);
+}
+
+60%,100%{
+transform:
+translateX(100%)
+rotate(30deg);
+}
+
+}
+
+@keyframes spin{
+
+to{
+transform:rotate(360deg);
+}
+
+}
+
+@keyframes heroIn{
+
+from{
+opacity:0;
+transform:translateX(-50px);
+}
+
+to{
+opacity:1;
+transform:translateX(0);
+}
+
+}
+
+@keyframes pop{
+
+from{
+opacity:0;
+transform:scale(.9);
+}
+
+to{
+opacity:1;
+transform:scale(1);
+}
+
+}
+
+/* =========================
+TABLET
+========================= */
+
+@media(max-width:900px){
+
+.nav-links{
+display:none;
+}
+
+.menu{
+display:block;
+}
+
+.hero{
+padding:80px 0;
+}
+
+.hero-inner{
+grid-template-columns:1fr;
+}
+
+.hero-image-area{
+height:470px;
+}
+
+.school-photo-box{
+height:420px;
+}
+
+.stats-grid{
+grid-template-columns:
+repeat(2,1fr);
+}
+
+.about-grid{
+grid-template-columns:1fr;
+}
+
+.feature-grid{
+grid-template-columns:
+1fr 1fr;
+}
+
+.blog-grid{
+grid-template-columns:
+1fr 1fr;
+}
+
+.footer-grid{
+grid-template-columns:
+1fr 1fr;
+}
+
+.cta-inner{
+display:block;
+}
+
+.cta .btn{
+margin-top:20px;
+}
+
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:600px){
+
+.topbar-inner{
+justify-content:center;
+text-align:center;
+}
+
+.hero{
+min-height:auto;
+padding:70px 0;
+}
+
+.hero h1{
+letter-spacing:-2px;
+}
+
+.hero-image-area{
+height:360px;
+}
+
+.school-photo-box{
+height:330px;
+border-width:5px;
+border-radius:25px;
+}
+
+.image-caption{
+left:12px;
+right:12px;
+bottom:12px;
+padding:14px;
+}
+
+.image-caption strong{
+font-size:17px;
+}
+
+.stats-grid{
+grid-template-columns:
+1fr 1fr;
+}
+
+.feature-grid{
+grid-template-columns:1fr;
+}
+
+.blog-grid{
+grid-template-columns:1fr;
+}
+
+.form-grid{
+grid-template-columns:1fr;
+}
+
+.full{
+grid-column:auto;
+}
+
+.gallery{
+grid-template-columns:
+1fr 1fr;
+
+grid-auto-rows:
+140px;
+}
+
+.gallery-item:first-child{
+grid-column:1/-1;
+grid-row:auto;
+}
+
+.timeline::before{
+left:8px;
+}
+
+.timeline-item,
+.timeline-item:nth-child(even){
+width:100%;
+margin:0;
+
+padding-left:35px;
+padding-right:0;
+}
+
+.timeline-item::after,
+.timeline-item:nth-child(even)::after{
+left:0;
+right:auto;
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+.cta h2{
+font-size:32px;
+}
+
+section{
+padding:75px 0;
+}
+
+}
+
+/* =========================
+REDUCED MOTION
+========================= */
+
+@media(prefers-reduced-motion:reduce){
+
+*{
+animation-duration:.01ms!important;
+animation-iteration-count:1!important;
+scroll-behavior:auto!important;
+transition-duration:.01ms!important;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+LOADER
+========================= -->
+
+<div class="loader" id="loader">
+<div class="loader-ring"></div>
+</div>
+
+<!-- =========================
+TOP BAR
+========================= -->
+
+<div class="topbar">
+
+<div class="container topbar-inner">
+
+<span>
+CBSE Affiliated School • Sewad, Rajasthan
+</span>
+
+<span>
+Admission enquiry number: +91-8875016460
+</span>
+
+</div>
+
+</div>
+
+<!-- =========================
+NAVIGATION
+========================= -->
+
+<nav class="nav">
+
+<div class="container nav-inner">
+
+<a href="#home" class="logo">
+
+<div class="logo-icon">
+G
+</div>
+
+<div class="logo-name">
+
+Gurukripa Public School
+
+<span class="logo-sub">
+GPS SEWAD • LEARN • LEAD • EXCEL
+</span>
+
+</div>
+
+</a>
+
+<div class="nav-links">
+
+<a href="#home">
+Home
+</a>
+
+<a href="#about">
+About
+</a>
+
+<a href="#facilities">
+Facilities
+</a>
+
+<a href="#gallery">
+Gallery
+</a>
+
+<a href="#blogs">
+Blogs
+</a>
+
+<a href="#events">
+Events
+</a>
+
+<a href="#admission">
+Admission
+</a>
+
+<a href="#contact">
+Contact
+</a>
+
+</div>
+
+<button
+class="menu"
+onclick="toggleMenu()"
+>
+☰
+</button>
+
+</div>
+
+</nav>
+
+<!-- MOBILE NAV -->
+
+<div
+class="mobile-menu"
+id="mobileMenu"
+>
+
+<div class="container">
+
+<a href="#home" onclick="toggleMenu()">
+Home
+</a>
+
+<a href="#about" onclick="toggleMenu()">
+About
+</a>
+
+<a href="#facilities" onclick="toggleMenu()">
+Facilities
+</a>
+
+<a href="#gallery" onclick="toggleMenu()">
+Gallery
+</a>
+
+<a href="#blogs" onclick="toggleMenu()">
+Blogs
+</a>
+
+<a href="#events" onclick="toggleMenu()">
+Events
+</a>
+
+<a href="#admission" onclick="toggleMenu()">
+Admission
+</a>
+
+<a href="#contact" onclick="toggleMenu()">
+Contact
+</a>
+
+</div>
+
+</div>
+
+<!-- =========================
+HERO
+========================= -->
+
+<section
+class="hero"
+id="home"
+>
+
+<div class="container hero-inner">
+
+<div class="hero-content">
+
+<span class="badge">
+✨ Welcome to GPS Sewad
+</span>
+
+<h1>
+
+Build a
+
+<span class="gradient">
+brighter future
+</span>
+
+with GPS Sewad.
+
+</h1>
+
+<p class="hero-description">
+
+Gurukripa Public School combines academics,
+technology, creativity, sports and values to
+help students learn with confidence and grow
+into responsible future leaders.
+
+</p>
+
+<div class="buttons">
+
+<a
+href="#admission"
+class="btn primary"
+>
+Apply Online →
+</a>
+
+<a
+href="#about"
+class="btn secondary"
+>
+Explore School
+</a>
+
+</div>
+
+</div>
+
+<!-- REAL UPLOADED IMAGE -->
+
+<div class="hero-image-area">
+
+<div class="image-decoration one"></div>
+
+<div class="image-decoration two"></div>
+
+<div class="school-photo-box">
+
+<img
+src="images.jpg"
+alt="Gurukripa Public School GPS Sewad campus"
+class="school-photo"
+>
+
+</div>
+
+</div>
+
+</div>
+<div class="image-caption">
+  
+  <strong>
+    Gurukripa Public School
+  </strong>
+  
+  <span>
+    GPS Sewad • Sikar, Rajasthan
+  </span>
+  
+</div>
+</section>
+
+<!-- =========================
+STATS
+========================= -->
+
+
+<section class="stats">
+
+<div class="container stats-grid">
+
+<div class="stat reveal">
+
+<span
+class="stat-number"
+data-number="1000"
+>
+0
+</span>
+
+<span class="stat-label">
+Students+
+</span>
+
+</div>
+
+<div class="stat reveal">
+
+<span
+class="stat-number"
+data-number="40"
+>
+0
+</span>
+
+<span class="stat-label">
+Teachers+
+</span>
+
+</div>
+
+<div class="stat reveal">
+
+<span
+class="stat-number"
+data-number="100"
+>
+0
+</span>
+
+<span class="stat-label">
+Learning Focus
+</span>
+
+</div>
+
+<div class="stat reveal">
+
+<span
+class="stat-number"
+data-number="20"
+>
+0
+</span>
+
+<span class="stat-label">
+Modern Facilities+
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+ABOUT
+========================= -->
+
+<section
+class="about"
+id="about"
+>
+
+<div class="container about-grid">
+
+<div class="info-card reveal">
+
+<span class="eyebrow">
+About Gurukripa
+</span>
+
+<h2>
+A lifetime of confidence starts here.
+</h2>
+
+<p>
+
+Gurukripa Public School, GPS Sewad, is presented
+as an English-medium CBSE-affiliated school focused
+on academic excellence, personality development,
+technology, sports and values.
+
+</p>
+
+<div class="check-list">
+
+<div class="check">
+
+<div class="check-icon">
+✓
+</div>
+
+<div>
+
+<b>
+CBSE Education
+</b>
+
+<br>
+
+Curriculum aligned with CBSE and NCERT learning.
+
+</div>
+
+</div>
+
+<div class="check">
+
+<div class="check-icon">
+✓
+</div>
+
+<div>
+
+<b>
+Technology Learning
+</b>
+
+<br>
+
+Smart classrooms, computers and digital tools.
+
+</div>
+
+</div>
+
+<div class="check">
+
+<div class="check-icon">
+✓
+</div>
+
+<div>
+
+<b>
+Holistic Development
+</b>
+
+<br>
+
+Sports, activities, creativity and leadership.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="info-card reveal">
+
+<div style="font-size:75px">
+🎓
+</div>
+
+<h3>
+Education with purpose
+</h3>
+
+<p>
+
+The school's published objectives emphasize
+excellence in studies and sports, a caring
+environment, creativity, future-ready education,
+wellness, fitness and parent participation.
+
+</p>
+
+<div class="buttons">
+
+<a
+href="#facilities"
+class="btn primary"
+>
+Explore Facilities
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+FACILITIES
+========================= -->
+
+<section
+id="facilities"
+>
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<span class="eyebrow">
+Campus Experience
+</span>
+
+<h2>
+Designed for curious minds.
+</h2>
+
+<p>
+
+Explore academic, technological, creative
+and sporting experiences.
+
+</p>
+
+</div>
+
+<div class="feature-grid">
+
+<div class="feature reveal">
+
+<div class="feature-icon">
+💻
+</div>
+
+<h3>
+Smart Classrooms
+</h3>
+
+<p>
+
+Digital teaching aids, computers,
+projectors, smart boards and visual
+learning resources.
+
+</p>
+
+</div>
+
+<div class="feature reveal">
+
+<div class="feature-icon">
+🤖
+</div>
+
+<h3>
+Robotics & Coding
+</h3>
+
+<p>
+
+Future-focused technology learning
+that encourages problem solving
+and innovation.
+
+</p>
+
+</div>
+
+<div class="feature reveal">
+
+<div class="feature-icon">
+🏃
+</div>
+
+<h3>
+Sports 
+</h3>
+
+<p>
+
+Fitness, sportsmanship and healthy
+competition beyond academic learning.
+
+</p>
+
+</div>
+
+<div class="feature reveal">
+
+<div class="feature-icon">
+🧪
+</div>
+
+<h3>
+Science Labs
+</h3>
+
+<p>
+
+Practical learning supported by
+laboratory spaces and hands-on
+exploration.
+
+</p>
+
+</div>
+
+<div class="feature reveal">
+
+<div class="feature-icon">
+📚
+</div>
+
+<h3>
+Library
+</h3>
+
+<p>
+
+A reading environment encouraging
+curiosity, discipline and independent
+learning.
+
+</p>
+
+</div>
+
+<div class="feature reveal">
+
+<div class="feature-icon">
+🏠
+</div>
+
+<h3>
+Hostel
+</h3>
+
+<p>
+
+A home-away-from-home environment
+supporting study, recreation and
+student wellbeing.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+GALLERY
+========================= -->
+
+<section
+class="gallery-section"
+id="gallery"
+>
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<span class="eyebrow">
+Visual Tour
+</span>
+
+<h2>
+Life at GPS Sewad.
+</h2>
+
+<p>
+A colorful animated visual section for
+campus activities and school memories.
+</p>
+
+</div>
+
+<div class="gallery">
+
+<div class="gallery-item">
+  🏫
+</div>
+
+<div class="gallery-item reveal">
+🔬
+</div>
+
+<div class="gallery-item reveal">
+⚽
+</div>
+
+<div class="gallery-item reveal">
+💡
+</div>
+
+<div class="gallery-item reveal">
+🎨
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+BLOGS
+========================= -->
+
+<section
+class="blogs"
+id="blogs"
+>
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<span class="eyebrow">
+School Stories
+</span>
+
+<h2>
+High-motion learning blogs.
+</h2>
+
+<p>
+Click a blog to open the animated information panel.
+</p>
+
+</div>
+
+<div class="blog-grid">
+
+<article class="blog reveal">
+
+<div class="blog-image">
+🧠
+</div>
+
+<div class="blog-body">
+
+<span class="blog-tag">
+Learning
+</span>
+
+<h3>
+Why smart classrooms matter
+</h3>
+
+<p>
+
+Visual and interactive tools can make
+complex ideas easier to explore.
+
+</p>
+
+<button
+class="btn secondary"
+onclick="
+openBlog(
+'Smart Classrooms',
+'GPS Sewad publishes information about smart classroom technology including computers, projectors, smart boards and visual teaching aids.'
+)
+"
+>
+Read Story →
+</button>
+
+</div>
+
+</article>
+
+<article class="blog reveal">
+
+<div class="blog-image">
+🤖
+</div>
+
+<div class="blog-body">
+
+<span class="blog-tag">
+Innovation
+</span>
+
+<h3>
+From curiosity to coding
+</h3>
+
+<p>
+
+Technology learning can help students
+develop problem-solving habits and confidence.
+
+</p>
+
+<button
+class="btn secondary"
+onclick="
+openBlog(
+'Coding & Robotics',
+'The school website highlights coding classes and robotics as part of its future-focused learning approach.'
+)
+"
+>
+Read Story →
+</button>
+
+</div>
+
+</article>
+
+<article class="blog reveal">
+
+<div class="blog-image">
+🏅
+</div>
+
+<div class="blog-body">
+
+<span class="blog-tag">
+Growth
+</span>
+
+<h3>
+Beyond the classroom
+</h3>
+
+<p>
+
+Activities can support creativity,
+teamwork, confidence and personality
+development.
+
+</p>
+
+<button
+class="btn secondary"
+onclick="
+openBlog(
+'Co-scholastic Activities',
+'GPS Sewad describes co-curricular activities as important for intellectual, emotional, social, moral and aesthetic development.'
+)
+"
+>
+Read Story →
+</button>
+
+</div>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+TIMELINE
+========================= -->
+
+<section
+id="events"
+>
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<span class="eyebrow">
+School Journey
+</span>
+
+<h2>
+A timeline of growth.
+</h2>
+
+<p>
+Use this section for events, achievements,
+notices and academic milestones.
+</p>
+
+</div>
+
+<div class="timeline">
+
+<div class="timeline-item reveal">
+
+<div class="timeline-box">
+
+<b>
+01 • Foundation
+</b>
+
+<h3>
+Values First
+</h3>
+
+<p>
+
+Building confidence, discipline,
+ethics and a love of learning.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item reveal">
+
+<div class="timeline-box">
+
+<b>
+02 • Innovation
+</b>
+
+<h3>
+Digital Learning
+</h3>
+
+<p>
+
+Smart classes, computer education
+and technology-assisted teaching.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item reveal">
+
+<div class="timeline-box">
+
+<b>
+03 • Beyond Academics
+</b>
+
+<h3>
+Sports & Activities
+</h3>
+
+<p>
+
+Encouraging teamwork, fitness,
+participation and creativity.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="timeline-item reveal">
+
+<div class="timeline-box">
+
+<b>
+04 • Session 2026–27
+</b>
+
+<h3>
+Admissions
+</h3>
+
+<p>
+
+Add current admission notices
+and important school dates here.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+ADMISSION
+========================= -->
+
+<section
+class="admission"
+id="admission"
+>
+
+<div class="container">
+
+<div class="section-title reveal">
+
+<span class="eyebrow">
+Admissions
+</span>
+
+<h2>
+Start the next chapter.
+</h2>
+
+<p>
+Submit an admission enquiry using this form.
+</p>
+
+</div>
+
+<form
+class="form reveal"
+onsubmit="submitForm(event)"
+>
+
+<div class="form-grid">
+
+<div class="field">
+
+<label>
+Student Name *
+</label>
+
+<input
+required
+placeholder="Enter student name"
+>
+
+</div>
+
+<div class="field">
+
+<label>
+Date of Birth *
+</label>
+
+<input
+required
+type="date"
+>
+
+</div>
+
+<div class="field">
+
+<label>
+Class Applying For *
+</label>
+
+<select required>
+
+<option value="">
+Select Class
+</option>
+
+<option>
+Nursery
+</option>
+
+<option>
+KG
+</option>
+
+<option>
+Class 1–5
+</option>
+
+<option>
+Class 6–8
+</option>
+
+<option>
+Class 9–10
+</option>
+
+<option>
+Class 11–12
+</option>
+
+</select>
+
+</div>
+
+<div class="field">
+
+<label>
+Parent Mobile *
+</label>
+
+<input
+required
+type="tel"
+placeholder="10-digit mobile number"
+>
+
+</div>
+
+<div class="field">
+
+<label>
+Parent Email
+</label>
+
+<input
+type="email"
+placeholder="name@example.com"
+>
+
+</div>
+
+<div class="field">
+
+<label>
+City
+</label>
+
+<input
+placeholder="Enter city"
+>
+
+</div>
+
+<div class="field full">
+
+<label>
+Message
+</label>
+
+<textarea
+placeholder="Enter your admission enquiry"
+></textarea>
+
+</div>
+
+<div class="full">
+
+<button
+class="btn primary"
+type="submit"
+>
+Send Admission Enquiry ✨
+</button>
+
+</div>
+
+</div>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- =========================
+CONTACT
+========================= -->
+
+<section
+class="cta"
+id="contact"
+>
+
+<div class="container cta-inner">
+
+<div>
+
+<span
+class="eyebrow"
+style="color:#8bdcff"
+>
+Get In Touch
+</span>
+
+<h2>
+Ready to explore GPS Sewad?
+</h2>
+
+<p>
+VPO-Sewad Bari, VIA Phagalwa,
+Sikar-332041
+</p>
+
+<p>
++91-8875016460
+</p>
+
+</div>
+
+<a
+href="tel:+918875016460"
+class="btn primary"
+>
+📞 Call Admission Desk
+</a>
+
+</div>
+
+</section>
+
+<!-- =========================
+FOOTER
+========================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div class="footer">
+
+<h3>
+Gurukripa Public School
+</h3>
+
+<p>
+
+GPS Sewad — a modern school website
+with animated design and responsive
+layout.
+
+</p>
+
+</div>
+
+<div class="footer">
+
+<h3>
+Explore
+</h3>
+
+<a href="#about">
+About
+</a>
+
+<a href="#facilities">
+Facilities
+</a>
+
+<a href="#gallery">
+Gallery
+</a>
+
+<a href="#blogs">
+Blogs
+</a>
+
+</div>
+
+<div class="footer">
+
+<h3>
+Admissions
+</h3>
+
+<a href="#admission">
+Online Enquiry
+</a>
+
+<a href="tel:+918875016460">
+Call School
+</a>
+
+<a
+href="https://gpssewad.ac.in"
+target="_blank"
+>
+Official Website
+</a>
+
+</div>
+
+<div class="footer">
+
+<h3>
+Contact
+</h3>
+
+<p>
+
+VPO-Sewad Bari,
+VIA Phagalwa,
+Sikar-332041
+
+</p>
+
+<p>
+
++91-8875016460
+<br>
++91-8875016453
+<br>
++91-8875016454
+
+</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+©
+<span id="year"></span>
+Gurukripa Public School — GPS Sewad.
+All rights reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+<!-- =========================
+BLOG MODAL
+========================= -->
+
+<div
+class="modal"
+id="modal"
+>
+
+<div class="modal-box">
+
+<button
+class="close"
+onclick="closeBlog()"
+>
+×
+</button>
+
+<span class="eyebrow">
+School Blog
+</span>
+
+<h2 id="modalTitle">
+Blog
+</h2>
+
+<p id="modalText">
+Content
+</p>
+
+<button
+class="btn primary"
+style="margin-top:20px"
+onclick="closeBlog()"
+>
+Close
+</button>
+
+</div>
+
+</div>
+
+<!-- =========================
+TOAST
+========================= -->
+
+<div
+class="toast"
+id="toast"
+>
+Message
+</div>
+
+<!-- =========================
+JAVASCRIPT
+========================= -->
+
+<script>
+
+/* SELECTOR */
+
+const $ =
+selector =>
+document.querySelector(selector);
+
+
+/* LOADER */
+
+window.addEventListener(
+"load",
+function(){
+
+setTimeout(
+function(){
+
+$("#loader")
+.classList
+.add("hide");
+
+},
+600
+);
+
+});
+
+
+/* YEAR */
+
+$("#year").textContent =
+new Date().getFullYear();
+
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+const menu =
+$("#mobileMenu");
+
+if(
+menu.style.display ===
+"block"
+){
+
+menu.style.display =
+"none";
+
+}else{
+
+menu.style.display =
+"block";
+
+}
+
+}
+
+
+/* SCROLL REVEAL */
+
+const revealObserver =
+new IntersectionObserver(
+function(entries){
+
+entries.forEach(
+function(entry){
+
+if(
+entry.isIntersecting
+){
+
+entry.target
+.classList
+.add("show");
+
+}
+
+});
+
+},
+{
+threshold:.12
+}
+);
+
+document
+.querySelectorAll(".reveal")
+.forEach(
+function(element){
+
+revealObserver
+.observe(element);
+
+}
+);
+
+
+/* COUNTER */
+
+const counterObserver =
+new IntersectionObserver(
+function(entries){
+
+entries.forEach(
+function(entry){
+
+if(
+!entry.isIntersecting
+)
+return;
+
+const element =
+entry.target;
+
+const target =
+Number(
+element.dataset.number
+);
+
+let current = 0;
+
+const step =
+Math.max(
+1,
+Math.ceil(target / 45)
+);
+
+const timer =
+setInterval(
+function(){
+
+current += step;
+
+if(
+current >= target
+){
+
+current =
+target;
+
+clearInterval(timer);
+
+}
+
+element.textContent =
+current +
+(target === 100
+? "%"
+: "+");
+
+},
+25
+);
+
+counterObserver
+.unobserve(element);
+
+});
+
+},
+{
+threshold:.7
+}
+);
+
+document
+.querySelectorAll(
+"[data-number]"
+)
+.forEach(
+function(element){
+
+counterObserver
+.observe(element);
+
+}
+);
+
+
+/* TOAST */
+
+function showToast(message){
+
+const toast =
+$("#toast");
+
+toast.textContent =
+message;
+
+toast.classList
+.add("show");
+
+setTimeout(
+function(){
+
+toast.classList
+.remove("show");
+
+},
+3000
+);
+
+}
+
+
+/* FORM */
+
+function submitForm(event){
+
+event.preventDefault();
+
+showToast(
+"Admission enquiry captured successfully! ✨"
+);
+
+event.target.reset();
+
+}
+
+
+/* BLOG */
+
+function openBlog(
+title,
+text
+){
+
+$("#modalTitle")
+.textContent =
+title;
+
+$("#modalText")
+.textContent =
+text;
+
+$("#modal")
+.classList
+.add("open");
+
+}
+
+
+function closeBlog(){
+
+$("#modal")
+.classList
+.remove("open");
+
+}
+
+
+/* CLOSE MODAL */
+
+$("#modal")
+.addEventListener(
+"click",
+function(event){
+
+if(
+event.target.id ===
+"modal"
+){
+
+closeBlog();
+
+}
+
+});
+
+
+/* ESCAPE */
+
+document.addEventListener(
+"keydown",
+function(event){
+
+if(
+event.key ===
+"Escape"
+){
+
+closeBlog();
+
+}
+
+});
+
+
+/* MOUSE PARALLAX */
+
+window.addEventListener(
+"mousemove",
+function(event){
+
+if(
+window.innerWidth < 900
+)
+return;
+
+const x =
+(event.clientX /
+window.innerWidth -
+.5) * 6;
+
+const y =
+(event.clientY /
+window.innerHeight -
+.5) * 6;
+
+const image =
+document.querySelector(
+".school-photo-box"
+);
+
+if(image){
+
+image.style.transform =
+"perspective(1000px) rotateY(" +
+(-3+x) +
+"deg) rotateX(" +
+(2+y) +
+"deg)";
+
+}
+
+});
+
+
+/* ACTIVE NAV */
+
+const sections =
+document.querySelectorAll(
+"section[id]"
+);
+
+const links =
+document.querySelectorAll(
+".nav-links a"
+);
+
+window.addEventListener(
+"scroll",
+function(){
+
+let current = "";
+
+sections.forEach(
+function(section){
+
+const position =
+section.offsetTop - 150;
+
+if(
+window.scrollY >= position
+){
+
+current =
+section.id;
+
+}
+
+});
+
+links.forEach(
+function(link){
+
+link.style.color =
+"";
+
+if(
+link.getAttribute("href") ===
+"#" + current
+){
+
+link.style.color =
+"#0796dc";
+
+}
+
+});
+
+});
+
+
+/* IMAGE ERROR FALLBACK */
+
+document
+.querySelector(".school-photo")
+.addEventListener(
+"error",
+function(){
+
+this.style.display =
+"none";
+
+this.parentElement.style.background =
+"linear-gradient(135deg,#bcecff,#ffffff)";
+
+this.parentElement.innerHTML +=
+"<div style='position:absolute;inset:0;display:grid;place-items:center;font-size:80px'>🏫</div>";
+
+}
+);
+
+</script>
+
+</body>
+</html>
